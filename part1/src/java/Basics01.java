@@ -25,6 +25,8 @@ class Basics01 {
 		System.out.println(obj.s2); // prints: Basics01@659e0bfd
 		
 		testAssignments();
+
+		obj.testLocal(3);
 	}
 
 	static void testAssignments() {
@@ -43,4 +45,15 @@ class Basics01 {
 		// Correct
 		int m = 100, n, l;
 	}
+
+	String s1 = "green mile";
+
+	void testLocal(int n) {
+		String local; // (1)
+		if (n > 0) local = "good"; // (2) this semicolon confused me
+		else local = "bad"         // I thought that this else operator would be illegal after ";"
+		                           // but it's absolutely OK.  
+		
+		System.out.println(s1 + " = " + local); // (3)
+	} 
 }
