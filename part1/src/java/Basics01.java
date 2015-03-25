@@ -44,6 +44,12 @@ class Basics01 {
 
 		// Correct
 		int m = 100, n, l;
+
+		// Correct
+		int r = 10, s = 5, t = 8 + s;
+		
+		// Illegal: q is assigned before being initialized
+		// int o = 0, p = q + 33, q = 4;
 	}
 
 	String s1 = "green mile";
@@ -51,7 +57,7 @@ class Basics01 {
 	void testLocal(int n) {
 		String local; // (1)
 		if (n > 0) local = "good"; // (2) this semicolon confused me
-		else local = "bad"         // I thought that this else operator would be illegal after ";"
+		else local = "bad";        // I thought that this else operator would be illegal after ";"
 		                           // but it's absolutely OK.  
 		
 		System.out.println(s1 + " = " + local); // (3)
