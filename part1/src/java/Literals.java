@@ -57,7 +57,7 @@ class Literals {
 		char b = 982;
 		char c = (char) 70_000;
 		char d = (char) -98;
-		System.out.println("a=" + a + ", b=" + b + ", c=" + c + "d=" + d);
+		System.out.println("a=" + a + ", b=" + b + ", c=" + c + ", d=" + d);
 	
 		// error: incompatible types: possible lossy conversion from int to char
 		// char e = -29; 
