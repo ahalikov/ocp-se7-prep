@@ -14,6 +14,8 @@ class Strings {
 		testTrim();
 
 		testSubstring();
+
+		testImmutable();
 	}
 
 	static void testSubstring() {
@@ -57,5 +59,16 @@ class Strings {
 		line.concat("world"); // tricky! remember that String is immutable !
 		String newLIne = line.trim();
 		System.out.println(line.length() + newLIne.length()); // --> 13 !
+	}
+
+	static void testImmutable() {
+		System.out.println("==== Immutability ====");
+		String s = "space explorations";
+		tryChange(s);
+		System.out.println(s);
+	}
+
+	static void tryChange(String str) {
+		str = "no money, no funny";
 	}
 }
