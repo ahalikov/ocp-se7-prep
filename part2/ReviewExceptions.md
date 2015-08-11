@@ -3,8 +3,6 @@ Java Exceptions
 
 Part I: http://habrahabr.ru/company/golovachcourses/blog/223821//#1
 
-Part II: http://habrahabr.ru/company/golovachcourses/blog/225585/
-
 Keywords related to exceptions: 
 
 * try
@@ -47,3 +45,25 @@ may output:
 ```
 
 Throwing exception - is an additional return type. 
+
+####`catch` is polymorphic.
+
+It is not recommended:
+
+*  to use `return` in finally-section (exception from `try` section can be wiped out).
+*  to do something in finally-section that can throw exception (exception from `try` section can be wiped out).
+*  
+
+Part II: http://habrahabr.ru/company/golovachcourses/blog/225585/
+
+####Pessimistic mechanism
+
+E.g.:
+
+```
+public class App {
+    public static void main(String[] args) throws Exception {
+        throw new IOException();
+    }
+}
+``` 
